@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "memories",
+  "info": {
+    "name": "Memory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "stars": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
